@@ -28,3 +28,45 @@
 // const num = null;
 // console.log(num.foo());
 // console.log(num.foo.bar());
+
+// let num:string | number = "seven";
+// num = true;
+
+// function getLength(something: string | number): number{
+//   // return something.length;
+//   return something.toString().length;
+// }
+
+// interface Person {
+//   readonly name: string;
+//   age: number;
+//   gender?: string;
+//   [propName:string]: number | string | undefined;
+// }
+
+// const tom:Person = {
+//   name: 'Tom',
+//   age: 25,
+// }
+
+// tom.name = 'alice';
+
+const fibonacci: number[]|string[] = [1, 1, 2, 3, 5];
+fibonacci.push(8);
+
+const fibonacci2: Array<number|string> = [1, 1, 2, 3, 5];
+fibonacci2.push('8');
+
+interface fibonacciArray {
+  [index: number] : number | boolean; 
+}
+
+const fibonacci3: fibonacciArray = [1, 1, 2, 3, true];
+
+function sum() {
+  const args: {
+    [index: number]: number;
+    length: number;
+    callee: Function;
+  } = arguments;
+}
