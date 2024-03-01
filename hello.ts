@@ -58,15 +58,21 @@ const fibonacci2: Array<number|string> = [1, 1, 2, 3, 5];
 fibonacci2.push('8');
 
 interface fibonacciArray {
-  [index: number] : number | boolean; 
+  [index: number] : number | string; 
 }
 
-const fibonacci3: fibonacciArray = [1, 1, 2, 3, true];
+const fibonacci3: fibonacciArray = [1, 1, 2, 3, "4"];
 
-function sum() {
+function sum1() {
   const args: {
     [index: number]: number;
     length: number;
     callee: Function;
   } = arguments;
 }
+
+function sum2() {
+  const args: IArguments = arguments;
+}
+
+const list: any[] = ['xcatliu', 25, { website: 'http://xcatliu.com' }];
