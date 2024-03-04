@@ -1,0 +1,7 @@
+interface Alarm {
+  alert(): void;
+}
+
+
+
+
