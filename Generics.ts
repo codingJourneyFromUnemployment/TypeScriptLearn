@@ -93,11 +93,16 @@ createArray4(3, 'x')
 class GenericNumber<T> {
   zeroValue: T;
   add: (x: T, y: T) => T;
+
+  constructor( zeroValue: T, add: (x : T, y : T) => T) {
+    this.zeroValue = zeroValue
+    this.add = add
+  }
 }
 
-let myGenericNumber = new GenericNumber<number>();
-myGenericNumber.zeroValue = 0;
-myGenericNumber.add = function(x, y) { return x + y; };
+let myGenericNumber = new GenericNumber<number>(0, function(x, y) { return x + y; })
+// myGenericNumber.zeroValue = 0;
+// myGenericNumber.add = function(x, y) { return x + y; };
 
 function createArray5<T = string>(length: number, value: T): Array<T> {
   const result = []
