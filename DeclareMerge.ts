@@ -11,3 +11,22 @@ function reverse(x: number | string): number | string {
   }
   throw new Error('not a number or string')
 }
+
+interface Alarm {
+  price: number;
+  alert(s: string): string;
+}
+
+interface Alarm {
+  weight: string;
+  alert(s: string, n: number): string;
+}
+
+interface Alarm {
+  price: number;
+  weight: string;
+  alert(s: string): string;
+  alert(s: string, n: number): string;
+}
+
+
