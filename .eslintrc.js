@@ -9,5 +9,5 @@ module.exports = {
       "error",
       "interface"
     ]
-  }
+  },
 }
